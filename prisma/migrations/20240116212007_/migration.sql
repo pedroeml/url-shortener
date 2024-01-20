@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "ShortUrl" ADD COLUMN     "hits" INTEGER NOT NULL DEFAULT 0;

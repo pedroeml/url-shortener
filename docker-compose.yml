@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  postgresdb:
+    image: postgres
+    container_name: todo-list-postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - todolistnet
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=todolistdb
+
+networks:
+  todolistnet:
+    driver: bridge
